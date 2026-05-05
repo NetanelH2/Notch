@@ -26,7 +26,8 @@ test('Send Playground bot a valid message and verify reply signal in thread', as
 	)
 	await chat.sendAsCustomerButton.click()
 
-	await expect(page.getByText(user.message)).toBeVisible()
+	await expect(await chat.messageBubble(user.message)).toBeVisible()
 	const botReplyResponse = await chatResponse
-	expect(botReplyResponse.ok()).toBeTruthy()
+	expect(botReplyResponse.status()).toBe(200)
+	await expect(chat.chatBotEndProcess).toBeVisible()
 })

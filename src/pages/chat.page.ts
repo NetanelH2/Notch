@@ -12,14 +12,18 @@ export const chatPage = (page: Page) => {
 		.getByPlaceholder('Use # for macros')
 		.or(page.locator('main .ql-editor[contenteditable="true"]'))
 		.last()
-
+	const chatBotEndProcess = page.getByText('Qualification Questions')
 	return {
 		emailInput,
 		sendAsCustomerButton,
 		chatTextArea,
+		chatBotEndProcess,
+		messageBubble: async (message: string) =>
+			page.getByRole('main').getByText(message, {exact: true}).last(),
+
 		fillChatText: async (text: string) => {
 			await scrollPlaygroundComposerPanel(page)
-			await chatTextArea.fill(text, {timeout: 15_000})
+			await chatTextArea.fill(text)
 		},
 	}
 }
