@@ -5,8 +5,8 @@ Short guide for cloning and running tests.
 ## 1) Install
 
 ```bash
-git clone <your-repo-url>
-cd Notch
+git clone https://github.com/notch-ai/e2e-notch.git
+cd e2e-notch
 npm install
 npx playwright install --with-deps
 ```
@@ -39,7 +39,5 @@ npm test
 ## Useful commands
 
 ```bash
-npm run test:sanity
-npm run test:nightly
 npm run report
 ```

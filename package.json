@@ -1,7 +1,7 @@
 {
-	"name": "e2e-starter-kit",
+	"name": "e2e-notch",
 	"version": "1.0.0",
-	"description": "Playwright + TypeScript E2E starter kit",
+	"description": "Playwright + TypeScript E2E for Notch",
 	"main": "index.js",
 	"scripts": {
 		"type-check": "tsc --noEmit",
