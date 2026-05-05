@@ -1,0 +1,8 @@
+# Ignore artifacts:
+build
+coverage
+node_modules
+package-lock-without-version.json
+playwright-report
+allure-results
+.auth/user.json

@@ -1,0 +1,51 @@
+{
+	"compilerOptions": {
+		/* Language and Environment */
+		"target": "esnext",
+		"lib": ["ESNext"],
+		"moduleDetection": "auto",
+
+		/* Modules */
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"allowImportingTsExtensions": true,
+
+		/* Interop Constraints */
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+
+		/* Emit */
+		"noEmit": true,
+		"outDir": "dist",
+		"rootDir": ".",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": false,
+		"erasableSyntaxOnly": false,
+
+		/* Type Checking */
+		"strict": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"noImplicitReturns": true,
+		"noImplicitOverride": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"allowUnreachableCode": false,
+
+		/* Completeness */
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	/* File Specification */
+	"include": ["src/**/*", "playwright.config.ts", "eslint.config.ts"],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"test-results",
+		"playwright-report",
+		"allure-results"
+	]
+}

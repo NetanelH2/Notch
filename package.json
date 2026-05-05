@@ -1,0 +1,49 @@
+{
+	"name": "e2e-starter-kit",
+	"version": "1.0.0",
+	"description": "Playwright + TypeScript E2E starter kit",
+	"main": "index.js",
+	"scripts": {
+		"type-check": "tsc --noEmit",
+		"quality:fix": "npm run type-check && prettier --write . && eslint . --fix",
+		"quality:check": "npm run type-check && prettier --check . && eslint .",
+		"prepare": "husky",
+		"report": "playwright show-report",
+		"report:allure": "allure serve allure-results",
+		"test": "npx playwright test --project=setup --project=chromium --project=teardown",
+		"test:sanity": "TEST_TAGS=\"@sanity\" npx playwright test --project=setup --project=chromium --project=teardown",
+		"test:nightly": "npx playwright test --project=setup --project=chromium --project=teardown"
+	},
+	"keywords": [
+		"playwright",
+		"testing",
+		"typescript",
+		"e2e"
+	],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"devDependencies": {
+		"@eslint/js": "^9.39.2",
+		"@eslint/json": "^1.0.0",
+		"@eslint/markdown": "^7.5.1",
+		"@playwright/test": "^1.58.2",
+		"@types/node": "^25.2.3",
+		"allure-commandline": "^2.36.0",
+		"allure-playwright": "^3.4.3",
+		"dotenv": "17.2.3",
+		"eslint": "^9.39.2",
+		"globals": "^17.3.0",
+		"husky": "^9.1.7",
+		"jiti": "^2.6.1",
+		"lint-staged": "^16.2.7",
+		"prettier": "3.8.1",
+		"ts-node": "10.9.2",
+		"typescript": "5.9.3",
+		"typescript-eslint": "^8.54.0"
+	},
+	"lint-staged": {
+		"*.{js,ts,mjs,cjs,mts,cts}": "eslint --cache --fix",
+		"*.{js,ts,css,md,json}": "prettier --write"
+	}
+}

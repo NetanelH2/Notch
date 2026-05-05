@@ -1,0 +1,4 @@
+export const PROPERTY_DEFAULTS = {
+	MAX_PAGES_TO_CRAWL: '5000',
+	INITIAL_SEED_COUNT: 1,
+} as const

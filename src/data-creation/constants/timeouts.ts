@@ -1,0 +1,4 @@
+const MINUTE_MS = 60 * 1000
+export const EXPECT_TIMEOUT_MS = 13 * MINUTE_MS
+export const TEST_TIMEOUT_MS = 15 * MINUTE_MS
+export const POLL_INTERVALS_MS = [500, 1000, 2000, 5000]
