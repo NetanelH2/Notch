@@ -5,7 +5,7 @@ Short guide for cloning and running tests.
 ## 1) Install
 
 ```bash
-git clone https://github.com/notch-ai/e2e-notch.git
+git clone https://github.com/NetanelH2/Notch.git
 cd e2e-notch
 npm install
 npx playwright install --with-deps
