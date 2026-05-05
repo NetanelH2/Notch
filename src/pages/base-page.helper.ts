@@ -5,5 +5,6 @@ export const getResponseJson = async <T>(response: Response): Promise<T> =>
 export const waitForApiResponse = (page: Page, route: string, method: string) =>
 	page.waitForResponse(
 		(response) =>
-			response.url().includes(route) && response.request().method() === method,
+			response.url().includes(route) &&
+			response.request().method() === method,
 	)

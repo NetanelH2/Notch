@@ -9,12 +9,9 @@
 		"quality:check": "npm run type-check && prettier --check . && eslint .",
 		"prepare": "husky",
 		"report": "playwright show-report",
-		"report:allure": "allure serve allure-results",
 		"auth:chrome": "open -na \"Google Chrome\" --args --remote-debugging-port=9222 --user-data-dir=/tmp/notch-auth https://guardio.app.getnotch.dev/login",
 		"auth:save": "node src/helpers/save-storage-from-cdp.mjs",
-		"test": "npx playwright test --project=setup --project=chromium",
-		"test:sanity": "TEST_TAGS=\"@sanity\" npx playwright test --project=setup --project=chromium",
-		"test:nightly": "npx playwright test --project=setup --project=chromium"
+		"test": "npx playwright test --project=setup --project=chromium"
 	},
 	"keywords": [
 		"playwright",
@@ -31,15 +28,12 @@
 		"@eslint/markdown": "^7.5.1",
 		"@playwright/test": "^1.58.2",
 		"@types/node": "^25.2.3",
-		"allure-commandline": "^2.36.0",
-		"allure-playwright": "^3.4.3",
 		"eslint": "^9.39.2",
 		"globals": "^17.3.0",
 		"husky": "^9.1.7",
 		"jiti": "^2.6.1",
 		"lint-staged": "^16.2.7",
 		"prettier": "3.8.1",
-		"ts-node": "10.9.2",
 		"typescript": "5.9.3",
 		"typescript-eslint": "^8.54.0"
 	},

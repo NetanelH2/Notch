@@ -1,7 +1,9 @@
 import {Page} from '@playwright/test'
 
 export const googleLoginPage = async (page: Page) => {
-	const passwordInput = page.getByRole('textbox', {name: 'Enter your password'})
+	const passwordInput = page.getByRole('textbox', {
+		name: 'Enter your password',
+	})
 	const nextButton = page.getByRole('button', {name: 'המשך'})
 	const autoLogin = page.getByText('כניסה אל getnotch.com')
 	return {
